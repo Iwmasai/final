@@ -18,7 +18,7 @@
     <tr><th>店名</th><th>住所</th><th>カテゴリー</th>
 <?php
     $pdo=new PDO($connect, USER,PASS);
-    foreach($pdo->query('select * from ra-men')as $row) {
+    foreach($pdo->query('select * from ra_men')as $row) {
         echo '<tr>';
         echo '<td>',$row['name'],'</td>';
         echo '<td>',$row['address'],'</td>';
