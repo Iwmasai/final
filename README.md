@@ -7,4 +7,4 @@
 
 システム名　　：ラーメン管理システム
 
-URL　　　　　 ：https://github.com/Iwmasai/final
+URL　　　　　 ：https://2201410.moo.jp/GitHub/final/src/menu.php
