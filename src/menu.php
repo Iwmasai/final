@@ -15,7 +15,7 @@
 <body>
 <h1>ラーメン店一覧</h1>
 <table>
-    <tr><th>店名</th><th>住所</th><th>カテゴリー</th>
+    <tr><th>店名</th><th>住所</th>
 <?php
     $pdo=new PDO($connect, USER,PASS);
     foreach($pdo->query('select * from ra_men')as $row) {
@@ -24,6 +24,13 @@
         echo '<td>',$row['address'],'</td>';
         echo '</tr>';
         echo "\n";
+        }
+
+        foreach ($pdo->query('SELECT * FROM category') as $row) {
+            echo '<tr>';
+            echo '<td>', $row['name'], '</td>';
+            echo '</tr>';
+            echo "\n";
         }
         ?>
         </table>
