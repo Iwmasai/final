@@ -26,7 +26,7 @@ $pdo = new PDO($connect, USER, PASS);
         </tr>
 
         <?php
-        $query = 'SELECT ra_men.name, category.name, ra_men.address
+        $query = 'SELECT ra_men.name, category_name, ra_men.address
                   FROM ra_men
                   LEFT JOIN category ON ra_men.category_id = category.category_id';
 
