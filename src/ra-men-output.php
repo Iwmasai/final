@@ -8,7 +8,7 @@
 <body>
     <?php
     $pdo = new PDO($connect, USER, PASS);
-    $sql = $pdo->prepare('INSERT INTO ra_men (id, name, address) VALUES (?, ?, ?)');
+    $sql = $pdo->prepare('INSERT INTO ra-men (id, name, address) VALUES (?, ?, ?)');
     
     if (empty($_POST['name'])) {
         echo '店舗名を入力してください。';
