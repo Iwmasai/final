@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 require 'db-connect.php';
 
 $pdo = new PDO($connect, USER, PASS);
-$sql = $pdo->prepare('INSERT INTO `ra-men` (name, address, category_id) VALUES (?, ?, ?)');
+$sql = $pdo->prepare('INSERT INTO `ra_men` (name, address, category_id) VALUES (?, ?, ?)');
 
 
 if (empty($_POST['name'])) {
