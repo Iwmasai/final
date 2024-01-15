@@ -18,6 +18,7 @@
         </select><br>
         住所: <input type="text" name="address"><br>
         <input type="submit" value="追加">
+        <input type="submit" value="戻る">
     </form>
 </body>
 </html>
