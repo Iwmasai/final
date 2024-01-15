@@ -11,7 +11,7 @@ require 'db-connect.php'; ?>
 <body>
     <?php
     $pdo = new PDO($connect, USER, PASS);
-    $sql = $pdo->prepare('INSERT INTO ra-men (id, name, address) VALUES (?, ?, ?)');
+    $sql = $pdo->prepare('INSERT INTO ra-men ( name, address) VALUES ( ?, ?)');
     
     if (empty($_POST['name'])) {
         echo '店舗名を入力してください。';
@@ -19,7 +19,7 @@ require 'db-connect.php'; ?>
         // ここで category_id を指定
         $category_id = $_POST['category'];
 
-        if ($sql->execute([$_POST['id'], $_POST['name'], $_POST['address'], $category_id])) {
+        if ($sql->execute([$_POST['name'], $_POST['address'], $category_id])) {
             echo '<font color="red">追加に成功しました。</font>';
         } else {
             echo '<font color="red">追加に失敗しました。</font>';
