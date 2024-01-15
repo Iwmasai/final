@@ -1,3 +1,14 @@
+<?php
+const SERVER = 'mysql220.phy.lolipop.lan';
+const DBNAME = 'LAA1517350-final';
+const USER = 'LAA1517350';
+const PASS = 'Pass0902';
+
+$connect = 'mysql:host=' . SERVER . ';dbname=' . DBNAME . ';charset=utf8';
+
+$pdo = new PDO($connect, USER, PASS);
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -15,7 +26,7 @@
         </tr>
 
         <?php
-        $query = 'SELECT ra_men.name, category.name AS category_name, ra_men.address
+        $query = 'SELECT ra_men.name, category.name, ra_men.address
                   FROM ra_men
                   LEFT JOIN category ON ra_men.category_id = category.category_id';
 
