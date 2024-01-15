@@ -12,7 +12,6 @@ if (empty($_POST['name'])) {
     $category_id = $_POST['category'];
 
     if ($sql->execute([$_POST['name'], $_POST['address'], $category_id])) {
-        echo '<font color="red">追加に成功しました。</font>';
         // 登録が成功したら menu.php にリダイレクト
         header('Location: menu.php');
         exit;
