@@ -11,7 +11,8 @@ require 'db-connect.php'; ?>
 <body>
     <?php
     $pdo = new PDO($connect, USER, PASS);
-    $sql = $pdo->prepare('INSERT INTO ra-men ( name, address) VALUES ( ?, ?)');
+    $sql = $pdo->prepare('INSERT INTO ra-men (name, address) VALUES (?, ?)');
+
     
     if (empty($_POST['name'])) {
         echo '店舗名を入力してください。';
