@@ -2,7 +2,6 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 require 'db-connect.php';
-?>
 <!DOCTYPE html>
 <html lang='ja'>
 <head>
@@ -10,7 +9,6 @@ require 'db-connect.php';
     <title>delete.php</title>
 </head>
 <body>
-<?php
     $pdo = new PDO($connect, USER, PASS);
     $sql = $pdo->prepare('DELETE FROM ra_men WHERE id = ?');
     if ($sql->execute([$_POST['id']])) {
