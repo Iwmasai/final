@@ -12,6 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $updateStatement = $pdo->prepare($updateQuery);
         $updateStatement->execute([$name, $category, $address, $id]);
         
+        // 更新された行数を取得
+        $updatedRows = $updateStatement->rowCount();
+        echo '更新された行数: ' . $updatedRows;
+
         header('Location: menu.php');
         exit;
     } catch (PDOException $e) {
