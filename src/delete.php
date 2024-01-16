@@ -1,7 +1,8 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-require 'db-connect.php'; ?>
+require 'db-connect.php';
+?>
 <!DOCTYPE html>
 <html lang='ja'>
 <head>
@@ -20,6 +21,5 @@ require 'db-connect.php'; ?>
     }
 ?>
     <button onclick="location.href='menu.php'">トップへ戻る</button>
-    </form>
 </body>
 </html>
