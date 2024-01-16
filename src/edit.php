@@ -15,7 +15,7 @@
                   LEFT JOIN category ON ra_men.category_id = category.category_id';
         foreach ($pdo->query($query) as $row) {
             echo '<tr>';
-            echo '<form action="update.php" method="post">';
+            echo '<form action="menu.php" method="post">';
             echo '<td>';
             echo '<input type="text" name="name" value="', $row['name'], '">';
             echo '</td>';
