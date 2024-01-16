@@ -1,4 +1,7 @@
-<?php require 'db-connect.php'; ?>
+<?
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+php require 'db-connect.php'; ?>
 <!DOCTYPE html>
 <html lang='ja'>
 <head>
