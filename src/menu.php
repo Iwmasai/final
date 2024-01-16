@@ -13,10 +13,11 @@
             <th>店名</th>
             <th>カテゴリー</th>
             <th>住所</th>
+            <th>操作</th>
         </tr>
 
         <?php
-        $query = 'SELECT ra_men.name, category_name, ra_men.address
+        $query = 'SELECT ra_men.id, ra_men.name, category.category_name, ra_men.address
                   FROM ra_men
                   LEFT JOIN category ON ra_men.category_id = category.category_id';
 
@@ -25,13 +26,11 @@
             echo '<td>', $row['name'], '</td>';
             echo '<td>', $row['category_name'], '</td>';
             echo '<td>', $row['address'], '</td>';
-            echo '<td>'
+            echo '<td>';
             echo '<form action="ren6-8-edit.php" method="post">';
             echo '<input type="hidden" name="id" value="', $row['id'], '">';
             echo '<button type="submit">更新</button>';
             echo '</form>';
-            echo '</td>';
-            echo '<td>';
             echo '<form action="delete.php" method="post">';
             echo '<input type="hidden" name="id" value="', $row['id'], '">';
             echo '<button type="submit">削除</button>';
