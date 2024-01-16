@@ -27,7 +27,7 @@
             echo '<td>', $row['category_name'], '</td>';
             echo '<td>', $row['address'], '</td>';
             echo '<td>';
-            echo '<form action="ren6-8-edit.php" method="post">';
+            echo '<form action="edit.php" method="post">';
             echo '<input type="hidden" name="id" value="', $row['id'], '">';
             echo '<button type="submit">更新</button>';
             echo '</form>';
