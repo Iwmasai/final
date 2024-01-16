@@ -25,6 +25,18 @@
             echo '<td>', $row['name'], '</td>';
             echo '<td>', $row['category_name'], '</td>';
             echo '<td>', $row['address'], '</td>';
+            echo '<td>'
+            echo '<form action="ren6-8-edit.php" method="post">';
+            echo '<input type="hidden" name="id" value="', $row['id'], '">';
+            echo '<button type="submit">更新</button>';
+            echo '</form>';
+            echo '</td>';
+            echo '<td>';
+            echo '<form action="delete.php" method="post">';
+            echo '<input type="hidden" name="id" value="', $row['id'], '">';
+            echo '<button type="submit">削除</button>';
+            echo '</form>';
+            echo '</td>';
             echo '</tr>';
             echo "\n";
         }

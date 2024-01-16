@@ -16,7 +16,7 @@
         echo '削除に失敗しました。';
     }
 ?>
-    <button onclick="location.href='ren6-8-top.php'">トップへ戻る</button>
+    <button onclick="location.href='menu.php'">トップへ戻る</button>
     </form>
 </body>
 </html>
