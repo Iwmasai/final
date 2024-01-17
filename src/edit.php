@@ -5,10 +5,54 @@
 <head>
     <meta charset="UTF-8">
     <title>更新</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 18px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        form {
+            display: inline;
+        }
+
+        select, input[type="text"], input[type="submit"] {
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
+    <h1>更新</h1>
     <table>
-        <tr><th>店舗名</th><th>カテゴリー</th><th>住所</th></tr>
+        <tr>
+            <th>店舗名</th>
+            <th>カテゴリー</th>
+            <th>住所</th>
+        </tr>
+
         <?php
         $query = 'SELECT ra_men.id, ra_men.name, category.category_id, category_name, ra_men.address
                   FROM ra_men
