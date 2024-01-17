@@ -12,9 +12,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $updateStatement = $pdo->prepare($updateQuery);
 
         // $id をバインド
+        $updateStatement->bindParam(1, $name, PDO::PARAM_STR);
+        $updateStatement->bindParam(2, $category, PDO::PARAM_INT);
+        $updateStatement->bindParam(3, $address, PDO::PARAM_STR);
         $updateStatement->bindParam(4, $id, PDO::PARAM_INT);
 
-        $updateStatement->execute([$name, $category, $address]);
+        $updateStatement->execute();
 
         // 更新された行数を取得
         $updatedRows = $updateStatement->rowCount();
