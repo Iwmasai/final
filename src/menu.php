@@ -36,15 +36,11 @@
         form {
             display: inline;
         }
-
-        select, input[type="text"], input[type="submit"] {
-            padding: 8px;
-            font-size: 16px;
-        }
     </style>
 </head>
 <body>
     <h1>ラーメン店一覧</h1>
+    <button onclick="location.href='ra-men-input.php'">登録</button>
     <table>
         <tr>
             <th>店名</th>
@@ -78,6 +74,5 @@
         }
         ?>
     </table>
-    <button onclick="location.href='ra-men-input.php'">登録</button>
 </body>
 </html>
