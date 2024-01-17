@@ -51,6 +51,7 @@
             <th>店舗名</th>
             <th>カテゴリー</th>
             <th>住所</th>
+            <th>操作</th>
         </tr>
 
         <?php
@@ -59,12 +60,13 @@
                   LEFT JOIN category ON ra_men.category_id = category.category_id';
         foreach ($pdo->query($query) as $row) {
             echo '<tr>';
+            echo '<td>', $row['name'], '</td>';
+            echo '<td>', $row['category_name'], '</td>';
+            echo '<td>', $row['address'], '</td>';
+            echo '<td>';
             echo '<form action="update.php" method="post">';
             echo '<input type="hidden" name="id" value="', $row['id'], '">';
-            echo '<td>';
             echo '<input type="text" name="name" value="', $row['name'], '">';
-            echo '</td>';
-            echo '<td>';
             echo '<select name="category">';
             $categories = ['とんこつ', '魚介とんこつ', '塩', '醤油', '味噌'];
             foreach ($categories as $key => $category) {
@@ -72,12 +74,10 @@
                 echo '<option value="' . ($key + 1) . '" ' . $selected . '>' . $category . '</option>';
             }
             echo '</select>';
-            echo '</td>';
-            echo '<td>';
             echo '<input type="text" name="address" value="', $row['address'], '">';
-            echo '</td>';
-            echo '<td><input type="submit" value="更新"></td>';
+            echo '<input type="submit" value="更新">';
             echo '</form>';
+            echo '</td>';
             echo '</tr>';
             echo "\n";
         }
