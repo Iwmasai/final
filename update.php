@@ -10,12 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         $updateQuery = 'UPDATE ra_men SET name=?, category_id=?, address=? WHERE id=?';
         $updateStatement = $pdo->prepare($updateQuery);
-
-        // $id をバインド
-        $updateStatement->bindParam(4, $id, PDO::PARAM_INT);
-
-        $updateStatement->execute([$name, $category, $address]);
-
+        $updateStatement->execute([$name, $category, $address, $id]);
+        
         // 更新された行数を取得
         $updatedRows = $updateStatement->rowCount();
         echo '更新された行数: ' . $updatedRows;
