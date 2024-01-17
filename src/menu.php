@@ -5,20 +5,32 @@
     <meta charset="UTF-8">
     <title>ラーメン店一覧</title>
     <style>
+        body {
+            text-align: center;
+            font-size: 18px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
         table {
-            width: 100%;
+            width: 80%;
+            margin: 20px auto;
             border-collapse: collapse;
-            margin-top: 20px;
         }
 
         th, td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 12px;
             text-align: center;
         }
 
         button {
-            margin-top: 10px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
         }
 
         form {
