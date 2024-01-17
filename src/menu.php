@@ -4,6 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <title>ラーメン店一覧</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        form {
+            display: inline;
+        }
+    </style>
 </head>
 <body>
     <h1>ラーメン店一覧</h1>
