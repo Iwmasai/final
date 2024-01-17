@@ -26,19 +26,17 @@
             margin-bottom: 10px;
         }
 
-        select, input[type="text"], input[type="submit"] {
-            padding: 8px;
+        select, input[type="text"], input[type="submit"], input[type="button"] {
+            padding: 10px;
             font-size: 16px;
             margin-bottom: 10px;
+            box-sizing: border-box;
         }
 
-        input[type="submit"] {
-            padding: 10px 20px;
-            font-size: 18px;
-        }
-
-        input[type="submit"]:first-child {
-            margin-right: 10px;
+        input[type="submit"], input[type="button"] {
+            width: 48%;
+            display: inline-block;
+            margin-right: 2%;
         }
     </style>
 </head>
