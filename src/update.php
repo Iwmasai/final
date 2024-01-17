@@ -20,11 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $updateStatement->execute();
 
         // 更新された行数を取得
+        // 更新された行数を取得
         $updatedRows = $updateStatement->rowCount();
         echo '更新された行数: ' . $updatedRows;
 
+        // リダイレクト
         header('Location: menu.php');
         exit;
+
     } catch (PDOException $e) {
         // エラーハンドリング
         echo 'エラー: ' . $e->getMessage();
