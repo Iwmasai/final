@@ -17,9 +17,9 @@
         </tr>
 
         <?php
-        $query = 'SELECT ra_men.id, ra_men.name, category.name AS category_name, ra_men.address
+        $query = 'SELECT ra_men.id, ra_men.name, category.category_name, ra_men.address
                   FROM ra_men
-                  LEFT JOIN category ON ra_men.category_id = category.id';
+                  LEFT JOIN category ON ra_men.category_id = category.category_id';
 
         foreach ($pdo->query($query) as $row) {
             echo '<tr>';
@@ -27,7 +27,7 @@
             echo '<td>', $row['category_name'], '</td>';
             echo '<td>', $row['address'], '</td>';
             echo '<td>';
-            echo '<form action="edit.php" method="post">';
+            echo '<form action="edit2.php" method="post">';
             echo '<input type="hidden" name="id" value="', $row['id'], '">';
             echo '<button type="submit">更新</button>';
             echo '</form>';
